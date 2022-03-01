@@ -251,6 +251,11 @@ DEVICE_PACKAGE_OVERLAYS += vendor/colt/overlay/common
 # Allow overlays to be excluded from enforcing RRO
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/colt/overlay
 
+# GApps
+ifeq ($(USE_GAPPS),true)
+include vendor/pixelgapps/pixel-gapps.mk
+endif
+
 -include vendor/colt/config/partner_gms.mk
 -include vendor/colt/config/version.mk
 
